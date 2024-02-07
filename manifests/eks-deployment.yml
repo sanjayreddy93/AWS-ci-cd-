@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-eks-demo
+  labels:
+    app: awesome-app
+spec:
+  selector:
+    matchLabels:
+      app: awesome-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: awesome-app
+    spec:
+      containers:
+      - image: CONTAINER_IMAGE
+        imagePullPolicy: Always
+        name: app-eks-demo
+        ports:
+        - containerPort: 8080
+  strategy:
+    type:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
