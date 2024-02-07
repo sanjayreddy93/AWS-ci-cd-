@@ -1,3 +1,3 @@
 locals {
-  s3_bucket = "test-78965845"
+  s3_bucket = "test-7896584"
 }
