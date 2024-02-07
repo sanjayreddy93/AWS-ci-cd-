@@ -22,7 +22,7 @@ spec:
         ports:
         - containerPort: 8080
   strategy:
-    type:
-      rollingUpdate:
-        maxSurge: 1
-        maxUnavailable: 1
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
