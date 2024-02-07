@@ -1,8 +1,15 @@
 name: 'Terraform'
 on:
     push:
+        
+        paths: 
+            - "*.tf"
+            - "terraform_modules/**" 
         branches: [ "main"]
     pull_request:
+        paths:
+            - "*.tf"
+            - "terraform_modules/**" 
         branches: [ "main" ]
 jobs:
     build:
