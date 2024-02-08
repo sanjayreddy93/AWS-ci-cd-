@@ -5,10 +5,10 @@ metadata:
   labels:
     app: awesome-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: awesome-app
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 8080
 
